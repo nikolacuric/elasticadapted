@@ -11,7 +11,7 @@
   "repositories": [
     {
       "type": "vcs",
-      "url": "https://github.com/nikolacuric/elasticadapted"
+      "url": "https://github.com/elasticadapted/elasticadapted"
     }
   ],
   "version": "1.0.0",
@@ -28,7 +28,7 @@
   },
   "autoload": {
     "psr-4": {
-      "ElasticAdapted\\": "src/ElasticAdapted/"
+      "ElasticAdapted\\": "src/"
     }
   },
   "autoload-dev": {
