@@ -58,11 +58,11 @@ class ElasticManager
      * @param $client
      * @param $index
      */
-    public function __construct($config, $client)
+    public function __construct($config)
     {
-        $this->elasticIndexing = new ElasticIndexing($config, $client);
-        $this->elasticSearching = new ElasticSearching($config, $client);
-        $this->elasticUpdating = new ElasticUpdating($config, $client);
-        $this->elasticDeleting = new ElasticDeleting($config, $client);
+        $this->elasticIndexing = new ElasticIndexing($config);
+        $this->elasticSearching = new ElasticSearching($config);
+        $this->elasticUpdating = new ElasticUpdating($config);
+        $this->elasticDeleting = new ElasticDeleting($config);
     }
 }

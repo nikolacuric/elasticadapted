@@ -2,6 +2,8 @@
 
 namespace ElasticAdapted;
 
+use Elastic\Elasticsearch\ClientBuilder;
+
 class ElasticBasicSetup
 {
     protected $config;
@@ -61,10 +63,10 @@ class ElasticBasicSetup
         }
     }
 
-    public function __construct($config, $client)
+    public function __construct($config)
     {
         $this->config = $config;
-        $this->client = $client;
+        $this->client = ClientBuilder::create()->setHosts($config['hosts'])->build();
     }
 
     protected function getClassFromFullyQualifiedCassName($fullyQualifiedClassName){
