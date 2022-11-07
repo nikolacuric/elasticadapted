@@ -1,0 +1,42 @@
+{
+  "name": "elasticadapted/elasticadapted",
+  "description": "Elasticsearch-PHP lib adapted for Laminas",
+  "keywords": ["search", "elastic"],
+  "type": "library",
+  "authors": [
+    {
+      "name": "Nikola Curic"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/nikolacuric/elasticadapted"
+    }
+  ],
+  "version": "1.0.0",
+  "require": {
+    "php": "^7.0",
+    "elasticsearch/elasticsearch": "^8.2.0"
+  },
+  "require-dev": {
+
+  },
+  "suggest": {
+    "ext-curl": "*",
+    "monolog/monolog": "Allows for client-level logging and tracing"
+  },
+  "autoload": {
+    "psr-4": {
+      "ElasticAdapted\\": "src/ElasticAdapted/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+
+    }
+  },
+  "config": {
+    "sort-packages": true
+  }
+}
