@@ -38,8 +38,8 @@ class ElasticSearching extends ElasticBasicSetup
 
         $array = [];
 
-        foreach ($arrayDefinition as $field=>$value) {
-            $array[] = ['match'=>[$field=>$value]];
+        foreach ($arrayDefinition as $concreteArray) {
+            $array[] = ['match'=>[(array_keys($concreteArray))[0]=>(array_values($concreteArray)[0])]];
         }
 
         $params = [
@@ -62,8 +62,8 @@ class ElasticSearching extends ElasticBasicSetup
 
         $array = [];
 
-        foreach ($arrayDefinition as $field=>$value) {
-            $array[] = ['match'=>[$field=>$value]];
+        foreach ($arrayDefinition as $concreteArray) {
+            $array[] = ['match'=>[(array_keys($concreteArray))[0]=>(array_values($concreteArray)[0])]];
         }
 
         $params = [
@@ -85,8 +85,8 @@ class ElasticSearching extends ElasticBasicSetup
 
         $array = [];
 
-        foreach ($arrayDefinition as $field=>$value) {
-            $array[] = ['wildcard'=>[$field=>$value]];
+        foreach ($arrayDefinition as $concreteArray) {
+            $array[] = ['wildcard'=>[(array_keys($concreteArray))[0]=>(array_values($concreteArray)[0])]];
         }
 
         $params = [
@@ -109,8 +109,8 @@ class ElasticSearching extends ElasticBasicSetup
 
         $array = [];
 
-        foreach ($arrayDefinition as $field=>$value) {
-            $array[] = ['wildcard'=>[$field=>$value]];
+        foreach ($arrayDefinition as $concreteArray) {
+            $array[] = ['wildcard'=>[(array_keys($concreteArray))[0]=>(array_values($concreteArray)[0])]];
         }
 
         $params = [
